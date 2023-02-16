@@ -1,0 +1,18 @@
+﻿@using houses.Models
+@model ModelListHouse
+@{
+    ViewBag.Title = "Home Page";
+}
+<script type="text/javascript" src="~/Scripts/autorization.js"></script>
+<form name="registration_form" class="form registration_form" method="post" action="~/LoginUser/autorization">
+    <label for="userLogin">Логін:</label>
+    <input name="userLogin" type="text" id="userLogin" class="form-control" required>
+    <label for="userPassword">Пароль:</label>
+    <div>
+        <input name="userPassword" type="password" id="userPassword" class="form-control password" required"><div class="btn_avt" id="showPass" onclick="showHide(this.id)" >показать</div>
+    </div>
+    <input name="auth" type="submit" value="Увійти" class=" btn_av">
+    <div class="reg">
+        @Html.ActionLink("Реєстаріця?", "Registration", "LoginUser", new { area = "" }, new { @class = "" })
+    </div>
+</form>

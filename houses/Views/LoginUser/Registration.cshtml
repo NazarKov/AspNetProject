@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "Registration";
+}
+<script type="text/javascript" src="~/Scripts/autorization.js"></script>
+<div class="registerForm" style="height:520px;margin-bottom:120px;">
+    <form name="registration_form" class="form registration" method="post" style="height:570px;" action="~/LoginUser/registration_user">
+
+        <label for="userName">Імя:</label>
+        <input name="userName" type="text" id="userName" class="form-control" required>
+
+        <label for="userlastname">Прізвище:</label>
+        <input name="userlastname" type="text" id="userlastname" class="form-control" required>
+
+        <label for="userLogin">Логін:</label>
+        <input name="userLogin" type="text" id="userLogin" class="form-control" required>
+
+        <label for="userEmail">Email:</label>
+        <input name="userEmail" type="email" id="userEmail" class="form-control" required>
+
+        <label for="userPhone">Телефон:</label>
+        <input name="userPhone" id="userEmail" class="form-control" required>
+
+        <label for="userPassword">Пароль:</label>
+        <div style="display: flex">
+            <input name="userPassword" type="password" id="userPassword" class="form-control"><div class="btn btn-primary" id="showPass" onclick="showHide(this.id)">показать</div>
+        </div>
+        <label for="userPasswordConfirm">Повторіть пароль:</label>
+        <div style="display: flex">
+            <input name="userPasswordConfirm" type="password" id="userPasswordConfirm" class="form-control" required onkeyup="check()"><div class="btn btn-primary" id="showConfPass" onclick="showHide(this.id)">показать</div>
+        </div>
+        <input name="register" type="submit" value="Реєстрація" class="btn btn-success form-control" style="margin-top: 30px">
+        <div class="reg">
+            @Html.ActionLink("Вхід?", "Index", "LoginUser", new { area = "" }, new { @class = "" })
+        </div>
+    </form>
+</div>

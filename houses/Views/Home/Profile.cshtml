@@ -1,0 +1,41 @@
+﻿<link type="text/css" rel="stylesheet" href="~/Content/profile.css" />
+@using houses.Models
+@model ModelUser
+
+<div style="display:inline-flex;margin-bottom:50px;">
+    <div class="desc">
+        <div class="img">
+            <img class="img" src="~/Media/DatabasePhoto/@Model.user.photo" />
+            @Html.ActionLink("Завантажити фото", "ViewPhoto", "LoginUser", new { }, new { @class = "profbtn" })
+        </div>
+        <div class="descrip" style="margin-top:25px;">
+            Фіо
+            <p>@Model.user.name</p>
+        </div>
+        <div class="descrip">
+            Логін
+            <p>@Model.user.Login</p>
+        </div>
+        <div class="descrip">
+            Елктроний адрес
+            <p>@Model.user.Email</p>
+        </div>
+        @Html.ActionLink("Змінити Email", "ViewEmail", "LoginUser", new { }, new { @class = "profbtn" })
+        <div class="descrip">
+            Номер телефону
+            <p>@Model.user.phone</p>
+        </div>
+        @Html.ActionLink("Змінити телефон", "ViewPhone", "LoginUser", new { }, new { @class = "profbtn" })
+        <div class="descrip">
+            Пароль
+            <p>@Model.user.password</p>
+        </div>
+        @Html.ActionLink("Змінити пароль", "ViewPassword", "LoginUser", new { }, new { @class = "profbtn" })
+    </div>
+    <div class="menu">
+        @Html.ActionLink("Профіль", "profile", "Home", new { }, new { @class = "button" })
+        @Html.ActionLink("Історія покупок", "UserOrderList", "Home", new { }, new { @class = "button" })
+        @Html.ActionLink("Вийти", "Exit", "LoginUser", new { category = "Офісне приміщення" }, new { @class = "button" })
+    </div>
+
+</div>

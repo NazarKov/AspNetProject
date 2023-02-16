@@ -1,0 +1,35 @@
+﻿<link type="text/css" rel="stylesheet" href="~/Content/profile.css" />
+@using houses.Models
+@model ModelOrdersList
+
+
+<div style="display:inline-flex;margin-bottom:50px;">
+    <div class="desc">
+        <table class="table" style="width:350px;">
+            <tr>
+                <th>Назва будинку</th>
+                <th>Ціна</th>
+                <th>статус</th>
+            </tr>
+
+            @{ if (Model == null)
+                {
+                    Write("<tr><th>Немає заказів</th><th></th> <th></th> </tr>");
+                }
+                else
+                {
+                    foreach (var p in Model.orders)
+                    {
+                        @Html.Partial("OrderPartical", p);
+                    }
+                }
+            }
+        </table>
+    </div>
+    <div class="menu">
+        @Html.ActionLink("Профіль", "profile", "Home", new { }, new { @class = "button" })
+        @Html.ActionLink("Історія покупок", "about", "Home", new { category = "all" }, new { @class = "button" })
+        @Html.ActionLink("Вийти", "Exit", "LoginUser", new { category = "Офісне приміщення" }, new { @class = "button" })
+    </div>
+
+</div>

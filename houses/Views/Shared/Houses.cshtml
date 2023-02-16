@@ -1,0 +1,12 @@
+﻿@model HousesModel.Entiti.Houses
+
+<div class="category">
+    <img class="image_cat" src="~/Media/DatabasePhoto/@Model.photo" />
+    <p>
+        @Model.categori.name
+    </p>
+    <p>
+        @Model.name
+    </p>
+    @Html.ActionLink(Model.price, "Product", "Home", new { name = Model.name }, new { @class = "btn_cat" })
+</div>

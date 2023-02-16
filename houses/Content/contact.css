@@ -1,0 +1,55 @@
+﻿.contact_div {
+    display: inline-flex;
+    width: 350px;
+    height: 450px;
+    margin-left: 300px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding: 15px;
+    flex-wrap: wrap;
+
+}
+
+    .contact_div > p {
+        margin: 0px;
+        padding: 0px;
+        color: #01556a;
+    }
+
+.contact_divv {
+    display: block;
+    width: 1024px;
+    height: 450px;
+    margin-left: 430px;
+}
+
+    .contact_divv > input {
+        margin-bottom: 15px;
+    }
+.contact_div > h2 {
+    color: #01556a;
+}
+
+.btn_contact {
+    background-color: #0195ae;
+    border: none;
+    color: #dae5ea;
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    opacity: 0.6;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    float: right;
+}
+.btn_contact:hover {
+        opacity: 1
+}
+.input_text
+{
+    width:990px;
+    max-width:990px;
+}

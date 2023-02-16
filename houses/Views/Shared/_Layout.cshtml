@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="~/Content/home.css" />
+    <link rel="stylesheet" type="text/css" href="~/Content/about.css" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body >
+    <div class="navigate">
+        <img  src="~/Media/image/logo.png" />
+        <nav>
+            @Html.ActionLink("Головна", "Index", "Home", new { area = "" }, new { @class = "navigate_text t" })
+            @Html.ActionLink("Пошук Будинків", "About", "Home", new { category = "all" }, new { @class = "navigate_text" })
+            @Html.ActionLink("Контакти", "Contact", "Home", new { area = "" }, new { @class = "navigate_text" })
+            @Html.Partial("_LoginUser");
+        </nav>
+    </div>
+    <div class="">
+        @RenderBody()
+      
+        <footer class=" footer">
+            <div class="div_footer">
+                <div>
+                    Контакти:
+                    <p>Україна,Волиньска область</p>
+                    <p>м.Луцьк вул.Незалежності,5</p>
+                    <p>тел :  (099) 63-67-125</p>
+                    <p>Приймальна комісія :  (099) 63-67-125</p>
+                    <p>E-mail :  nazar.korniychuk@ukr.net</p>
+                </div>
+            </div>
+            <div class="footer_div_text">
+                <p>Розроблений Korniychuk Nazar &reg</p>
+            </div>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

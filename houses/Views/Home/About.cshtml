@@ -1,0 +1,32 @@
+﻿@using houses.Models
+@model ModelListHouse
+@{
+    ViewBag.Title = "About";
+    HttpCookie text_search = Request.Cookies.Get("text");
+}
+<script>
+    function Show(text) {
+        document.cookie = "text=" + text;
+        console.log(document.cookie);
+    }
+</script>
+<div class="body">
+    <div class="menu">
+        <div class="button" style="font-size:20px;">Категорії</div>
+        @Html.ActionLink("Всі Преміщення", "about", "Home", new { category = "all" }, new { @class = "button" })
+        @Html.ActionLink("Квартири", "about", "Home", new { category = "Квартира" }, new { @class = "button" })
+        @Html.ActionLink("Будинки", "about", "Home", new { category = "Будинок" }, new { @class = "button" })
+        @Html.ActionLink("Офіси", "about", "Home", new { category = "Офісне приміщення" }, new { @class = "button" })
+    </div>
+    <div class="search">
+        <input name="text" type="text" class="form-control" oninput="Show(this.value)"/>
+        @Html.ActionLink("Знайти", "about", "Home", new { Search = text_search.Value }, new { @class = "form-control" });
+    </div>
+    <div class="content">
+        @foreach (var p in Model.houses)
+        {
+            @Html.Partial("HouseList", p);
+        }
+    </div>
+
+</div>

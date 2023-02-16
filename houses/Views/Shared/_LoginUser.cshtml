@@ -1,0 +1,12 @@
+﻿<div class="nav_">
+    <ul class="topmenu">
+        <li>
+            @Html.ActionLink("Профіль", "Profile", "Home", new { area = "" }, new { })
+            <ul class="submenu">
+                <li>@Html.ActionLink("Вхід", "Index", "LoginUser", new { area = "" }, new { @class = "" })</li>
+                <li>@Html.ActionLink("Реєстаріця", "Registration", "LoginUser", new { area = "" }, new { @class = "" })</li>
+
+            </ul>
+        </li>
+    </ul>
+</div>

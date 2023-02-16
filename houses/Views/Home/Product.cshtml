@@ -1,0 +1,33 @@
+﻿@using houses.Models
+@model ModelHouse
+@{
+
+}
+<div class="product">
+    <div style="display:inline-flex">
+        <div class="img_product">
+            <img src="~/Media/DatabasePhoto/@Model.Houses.photo" />
+        </div>
+        <div class="name_product">
+            <div class="price_product">
+                <h3>@Model.Houses.name</h3>
+                <p>@Model.Houses.categori.name</p>
+            </div>
+
+            <div class="price_product">
+                <h3>@Model.Houses.price$</h3>
+            </div>
+            @Html.ActionLink("Придбати", "order", "Home", new { house=Model.Houses.name }, new { @class = "button_product" })
+        </div>
+    </div>
+
+    <div class="disc_product">
+        <h5>Опис:</h5>
+        <p>@Model.Houses.Description</p>
+        <h5>адреса:</h5>
+        <p>@Model.Houses.addres</p>
+        <h5>номер будинку:</h5>
+        <p>@Model.Houses.nomerHouse</p>
+    </div>
+
+</div>

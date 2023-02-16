@@ -1,0 +1,140 @@
+﻿body {
+    background: #b1daea;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+   
+}
+.product {
+    margin:100px;
+}
+.img_product {
+    margin-top:50px;
+    margin-left:250px;
+}
+    .img_product > img {
+        height: 350px;
+        width: 500px;
+    }
+.name_product {
+    margin-top: 50px;
+    margin-left: 50px;
+    height: 350px;
+    width: 500px;
+  
+}
+.button_product {
+    display:block;
+    height: 50px;
+    width: 250px;
+    background-color: #0195ae;
+    text-align: center;
+    padding-top: 12px;
+    color: #dae5ea;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+    .button_product:hover {
+        color: #dae5ea;
+        background-color: #01556a;
+    }
+.price_product {
+    color: #01556a;
+    display: block;
+    margin-top: 25px;
+    opacity: 0.5;
+    border: 1px solid #01556a;
+    padding-left: 10px;
+    margin-bottom: 25px;
+}
+.price_product>h3{
+    opacity:1;
+    margin-bottom:10px;
+
+}
+.disc_product {
+    opacity: 0.5;
+    border: 1px solid #01556a;
+    padding-left: 10px;
+    width: 150px;
+    display: block;
+    margin-left: 250px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 1050px;
+}
+.disc_product>h5{
+    opacity:2.5;
+    color:#01556a;
+    margin:10px;
+    margin-top:15px;
+}
+.reg
+{
+    margin-top: 25px;
+}
+.btn_av {
+    margin-top: 25px;
+    background-color: #0195ae;
+    color: #dae5ea;
+    display: block;
+    padding: 5px;
+    width: 528px;
+    border:none;
+    border-radius:5px;
+}
+    .btn_av:hover {
+        background-color: #01556a;
+    }
+.password
+{
+    height: 35px;
+    width:428px;
+}
+.btn_avt {
+    margin-top:-35px;
+    background-color: #0195ae;
+    color: #dae5ea;
+    padding: 5px;
+    width:100px;
+    height:35px;
+    margin-left:430px;
+    text-align:center;
+    border: none;
+    border-radius: 5px;
+}
+.registration_form
+{
+    height: 300px;
+    width: 600px;
+    display: block;
+    margin-top:120px;
+    margin-bottom:120px;
+    margin-left: 35%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 35px;
+}
+.registration
+{
+    height: 650px;
+    width: 600px;
+    display: block;
+    margin-top:100px;
+    margin-left: 35%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 35px;
+}

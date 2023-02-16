@@ -1,0 +1,80 @@
+﻿@using houses.Models
+@model ModelListHouse
+@{
+    ViewBag.Title = "Home Page";
+}
+<div class="div_index">
+    <p class="text_s">Фото бyдинків</p>
+    <div class="all">
+        <input checked type="radio" name="respond" id="desktop">
+        <article id="slider">
+            <input checked type="radio" name="slider" id="switch1">
+            <input type="radio" name="slider" id="switch2">
+            <input type="radio" name="slider" id="switch3">
+            <input type="radio" name="slider" id="switch4">
+            <input type="radio" name="slider" id="switch5">
+            <div id="slides">
+                <div id="overflow">
+                    <div class="image" style="height:100px;">
+                        <article><img src="~/Media/image/1.jpg"></article>
+                        <article><img src="~/Media/image/2.jpg"></article>
+                        <article><img src="~/Media/image/3.jpg"></article>
+                        <article><img src="~/Media/image/4.jpg"></article>
+                        <article><img src="~/Media/image/5.jpg"></article>
+                    </div>
+                </div>
+            </div>
+            <div id="controls">
+                <label for="switch1"></label>
+                <label for="switch2"></label>
+                <label for="switch3"></label>
+                <label for="switch4"></label>
+                <label for="switch5"></label>
+            </div>
+            <div id="active">
+                <label for="switch1"></label>
+                <label for="switch2"></label>
+                <label for="switch3"></label>
+                <label for="switch4"></label>
+                <label for="switch5"></label>
+            </div>
+        </article>
+    </div>
+    <div class="div_cat">
+        <p>Категорії</p>
+        <div class="category_">
+            <img class="image_cat" src="~/Media/DatabasePhoto/category/@ViewBag.cat1.photo" />
+            <p>
+                @ViewBag.cat1.name
+            </p>
+            @Html.ActionLink("відкрити", "about", "Home", new { category = "Будинок" }, new { @class = "btn_cat" })
+        </div>
+        <div class="category_">
+            <img class="image_cat" src="~/Media/DatabasePhoto/category/@ViewBag.cat2.photo" />
+            <p>
+                @ViewBag.cat2.name
+            </p>
+            @Html.ActionLink("відкрити", "about", "Home", new { category = "Квартира" }, new { @class = "btn_cat" })
+        </div>
+        <div class="category_">
+            <img class="image_cat" src="~/Media/DatabasePhoto/category/@ViewBag.cat3.photo" />
+            <p>
+                @ViewBag.cat3.name
+            </p>
+            @Html.ActionLink("відкрити", "about", "Home", new { category = "Офісне приміщення" }, new { @class = "btn_cat" })
+        </div>
+    </div>
+
+    <div class="div_cat">
+        <p>Популяні будинки</p>
+        @foreach(HousesModel.Entiti.Houses p in Model.houses)
+        {
+            if(p.rec=="1")
+            { 
+                @Html.Partial("Houses", p);
+            }
+        }
+    </div>
+
+
+</div>
